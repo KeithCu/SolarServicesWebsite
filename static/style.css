@@ -1,0 +1,104 @@
+/* static/css/style.css */
+
+body {
+    padding-top: 56px; /* Offset for the fixed navbar */
+}
+
+.hero-section {
+    position: relative;
+    padding: 10rem 0;
+    background: url('IMG_20250522_133956600_AE.webp') no-repeat center 60%;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* This creates the dark overlay on the hero image for better text readability */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Slightly lighter overlay for better image visibility */
+}
+
+.hero-section .container {
+    position: relative; /* Ensures text is on top of the overlay */
+    z-index: 2;
+}
+
+.contact-section {
+    background-color: #212529; /* A dark color matching the navbar */
+}
+
+.card-title {
+    color: #343a40;
+}
+
+.card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Gallery styles */
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.gallery-section .card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-section .card:hover {
+    transform: translateY(-5px);
+}
+
+/* Carousel styles */
+.carousel {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carousel-item {
+    height: 533px;
+}
+
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+    background-color: #f8f9fa;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    bottom: 2rem;
+}
+
+.carousel-indicators {
+    margin-bottom: 1rem;
+}
+
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
