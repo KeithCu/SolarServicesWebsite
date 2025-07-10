@@ -1,12 +1,17 @@
 # app.py
 import yaml
+import os
 from flask import Flask, render_template, send_from_directory
 from functools import lru_cache
 
 application = app = Flask(__name__)
 
+# Get the directory of the current script
+script_dir = os.path.dirname(__file__)
+config_path = os.path.join(script_dir, 'config.yaml')
+
 # Load configuration
-with open('config.yaml', 'r') as f:
+with open(config_path, 'r') as f:
     config = yaml.safe_load(f)
 
 @app.route("/")
